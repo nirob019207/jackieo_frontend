@@ -1,11 +1,14 @@
 'use client';
 
-import Explore from "@/components/Home/Explore";
+import Hero from "@/components/Home/Hero"
+import OurFlowers from "@/components/Home/OurFlowers";
 
-export default function Page() {
+
+export default function page() {
   return (
-    <div>
-      <Explore />
+    <div className='bg-[#F5F5F5] font-inter'>
+      <Hero />
+      <OurFlowers />
     </div>
   );
 }

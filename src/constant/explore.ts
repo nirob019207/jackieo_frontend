@@ -18,6 +18,12 @@ export const explore = [
       price: 24.99,
       rating: 4,
       imageUrl: flower,
+    },
+    {
+      title: "Tulip Garden",
+      price: 24.99,
+      rating: 4,
+      imageUrl: flower,
     }
   ];
   

@@ -5,7 +5,7 @@ import { explore } from "@/constant/explore"; // Import the explore data
 
 export default function Explore() {
   return (
-    <div className="container py-44">
+    <div className="container py-44 min-h-screen">
       <div className="">
         <div className="flex justify-between items-start">
           <div>
@@ -22,7 +22,7 @@ export default function Explore() {
       </div>
 
       {/* Dynamically render ProductCard using explore data */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 ">
         {explore.map((product, index) => (
           <ProductCard
             key={index}

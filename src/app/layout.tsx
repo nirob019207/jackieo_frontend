@@ -4,8 +4,8 @@ import "./globals.css";
 import { Inter, Roboto } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Mohammad Moba",
-  description: "Mohammad Moba",
+  title: "Jackieo || frontend",
+  description: "",
   icons: {
     icon: "/icon.svg", 
   },

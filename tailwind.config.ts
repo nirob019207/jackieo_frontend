@@ -25,8 +25,10 @@ export default {
   			]
   		},
   		colors: {
-  			primary: "#0077FF",
-			secondary:"#182134",
+  			primary: "#E8636F",
+			secondary:"#FFF2F0",
+			textPrimary: "#242424",
+			textSecondary: "#2D2D2D",
 			default: "#1D2939",
 			gray: "#545454",
   			secondery: '#1D2939',

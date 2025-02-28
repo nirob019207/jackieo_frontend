@@ -2,7 +2,7 @@
 
 
 import Footer from "@/shared/Footer";
-import { Navbar } from "@/shared/Navbar";
+import Navbar from "@/shared/Navbar";
 import { ReactNode } from "react";
 
 interface LayoutProps {
@@ -14,8 +14,8 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-    <Navbar/>
-     
+      <Navbar />
+
 
       <main style={{ minHeight: "calc(100vh - 360px)" }}>{children}</main>
       <Footer />

@@ -1,103 +1,105 @@
-"use client"
+import { FC } from "react";
+import Image from "next/image";
+import { X } from "lucide-react";
+import gift1 from "@/assets/gift1.png";
+import gift2 from "@/assets/giif2.png";
 
-import { useState } from "react"
+interface GiftCardModalProps {
+  isModalOpen: boolean;
+  selectedCard: number | null;
+  setSelectedCard: (id: number) => void;
+  handleModalClose: () => void;
+  handleNextModal: () => void;
 
-export default function GiftCard() {
-  const [selectedCard, setSelectedCard] = useState<number | null>(null)
+}
+// isModalOpen={isModalOpen}
+// selectedCard={selectedCard}
+// setSelectedCard={setSelectedCard}
+// handleNextModal={handleNextModal}
 
-  const cards = [
-    {
-      id: 1,
-      title: "Birthday",
-      image: "/placeholder.svg?height=150&width=250",
-      bgColor: "bg-amber-50",
-      borderColor: "border-amber-200",
-    },
-    {
-      id: 2,
-      title: "HAPPY BIRTHDAY",
-      image: "/placeholder.svg?height=150&width=250",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
-    },
-    {
-      id: 3,
-      title: "Birthday",
-      image: "/placeholder.svg?height=150&width=250",
-      bgColor: "bg-amber-50",
-      borderColor: "border-amber-200",
-    },
-    {
-      id: 4,
-      title: "BIRTHDAY PARTY",
-      image: "/placeholder.svg?height=150&width=250",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
-    },
-    {
-      id: 5,
-      title: "HAPPY BIRTHDAY",
-      image: "/placeholder.svg?height=150&width=250",
-      bgColor: "bg-teal-50",
-      borderColor: "border-teal-200",
-    },
-    {
-      id: 6,
-      title: "Birthday",
-      image: "/placeholder.svg?height=150&width=250",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-200",
-    },
-  ]
+const GiftCard: FC<GiftCardModalProps> = ({
+  isModalOpen,
+  selectedCard,
+  setSelectedCard,
+  handleModalClose,
+  handleNextModal,
+}) => {
+  const cardOptions = [
+    { id: 1, title: "Birthday Celebration", image: gift1 },
+    { id: 2, title: "Happy Birthday", image: gift2 },
+    { id: 3, title: "Birthday Wishes", image: gift1 },
+    { id: 4, title: "Birthday Party", image: gift2 },
+    { id: 5, title: "Happy Birthday", image: gift1 },
+    { id: 6, title: "Birthday Wishes", image: gift1 },
+  ];
 
   return (
-    <div className="fixed inset-0 bg-black/30 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full p-6 relative">
-        <button className="absolute right-4 top-4 text-gray-400 hover:text-gray-600">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-x"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </button>
-
-        <h2 className="text-center text-xl font-medium text-gray-800 mb-6">Add a card toyourgiftforfree</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className={`${card.bgColor} ${card.borderColor} border-2 rounded-md p-2 cursor-pointer transition-all duration-200 ${selectedCard === card.id ? "ring-2 ring-pink-500" : "hover:shadow-md"}`}
-              onClick={() => setSelectedCard(card.id)}
-            >
-              <div className="bg-white rounded overflow-hidden">
-                <img
-                  src={card.image || "/placeholder.svg"}
-                  alt={`${card.title} card template`}
-                  className="w-full h-auto object-cover"
-                />
+    <>
+      {isModalOpen && (
+        <div className="h-[241px]">
+          <div className="fixed inset-0 bg-black backdrop-blur-[10px] bg-opacity-50 flex justify-center items-center z-50">
+            <div className="p-6 rounded-lg container w-full">
+              <div
+                className="flex justify-end cursor-pointer text-white"
+                onClick={handleModalClose}
+              >
+                <X />
+              </div>
+              <h2 className="text-center text-white text-2xl font-bold text-gray-800 mb-6">
+              Add a card toyourgiftforfree
+              </h2>
+              <div className="grid grid-cols-3 gap-4">
+                {cardOptions.map((card) => (
+                  <div
+                    key={card.id}
+                    className={`relative border-2 rounded-lg overflow-hidden cursor-pointer transition-all ${
+                      selectedCard === card.id
+                        ? "border-pink-500 shadow-md"
+                        : "border-gray-200"
+                    }`}
+                    onClick={() => setSelectedCard(card.id)}
+                  >
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      height={160}
+                      width={282}
+                      className="w-full h-40 object-cover"
+                    />
+                    {selectedCard === card.id && (
+                      <div className="absolute top-2 right-2 bg-pink-500 text-white rounded-full p-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex justify-center">
+                <button
+                  onClick={handleNextModal}
+                  className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-8 rounded-lg transition-colors"
+                >
+                  Next
+                </button>
               </div>
             </div>
-          ))}
+          </div>
         </div>
+      )}
+    </>
+  );
+};
 
-        <div className="flex justify-center">
-          <button className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-12 rounded-full transition-colors duration-200">
-            Next
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
+export default GiftCard;

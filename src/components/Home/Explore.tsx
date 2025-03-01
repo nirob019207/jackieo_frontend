@@ -1,7 +1,6 @@
 // components/Explore.tsx
 import React from "react";
 
-
 import exploreImgOne from "@/assets/exploreImgOne.svg";
 import exploreImgTwo from "@/assets/exploreImgTwo.svg";
 import exploreImgThree from "@/assets/exploreImgThree.svg";
@@ -39,7 +38,7 @@ export default function Explore() {
       price: 100,
       rating: 5,
     },
-  ]
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -49,11 +48,14 @@ export default function Explore() {
             Explore Our Stunning Collections
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed">
-            Explore our handpicked floral collections, perfect for every occasion. Fresh, elegant, and beautifully
-            arranged.
+            Explore our handpicked floral collections, perfect for every
+            occasion. Fresh, elegant, and beautifully arranged.
           </p>
         </div>
-        <Link href="/seasonalFlower" className="text-sm text-rose-500 font-medium">
+        <Link
+          href="/seasonalFlower"
+          className="text-sm text-rose-500 font-medium"
+        >
           See All
         </Link>
       </div>
@@ -80,9 +82,12 @@ export default function Explore() {
               <h3 className="font-medium text-gray-900">${collection.price}</h3>
             </div>
             <h4 className="text-sm text-gray-900 mb-3">{collection.title}</h4>
-            <button className="mt-auto py-2 px-4 border border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors">
+            <Link
+              href="/flowerDetails"
+              className="mt-auto py-2 px-4 border text-center border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors"
+            >
               View More
-            </button>
+            </Link>
           </div>
         ))}
       </div>

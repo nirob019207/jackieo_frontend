@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image"
 import Rating from "../icon/Rating"
+import Link from "next/link"
 
 interface ProductCardProps {
   title: string
@@ -28,13 +29,16 @@ export default function ProductCard({ title, price, rating = 5, imageUrl, onView
        </div>
 
         <h3 className="font-medium text-gray-900">{title}</h3>
-
+        <Link href="/flowerDetails" >
+             
         <button
           onClick={onViewMore}
-          className="w-full rounded-lg bg-pink-50 py-2.5 text-sm font-medium text-pink-600 transition-colors hover:bg-pink-100"
+          className="mt-auto py-2 px-4 w-full bg-secondary border-[#E8636F] text-rose-500 rounded text-sm font-medium  transition-colors"
         >
           View More
         </button>
+   
+        </Link>
       </div>
     </div>
   )

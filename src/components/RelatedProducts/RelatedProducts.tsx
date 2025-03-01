@@ -38,35 +38,35 @@ export default function RelatedProducts() {
   ];
   return (
     <div className="">
-      <h1>Related Products</h1>
+      <h1 className="text-[#242424] lg:text-[40px] text-[24px] text-center py-8 leading-[130%] ">Related Products</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
         {collections.map((collection) => (
-          <div key={collection.id} className="flex flex-col">
-            <div className="relative aspect-square mb-3 bg-gray-100 rounded-md overflow-hidden">
-              <Image
-                src={collection.image || "/placeholder.svg"}
-                alt={collection.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="flex mb-1">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-amber-400">
-                  ★
-                </span>
-              ))}
-            </div>
-            <div className="flex justify-between items-center mb-1">
-              <h3 className="font-medium text-gray-900">${collection.price}</h3>
-            </div>
-            <h4 className="text-sm text-gray-900 mb-3">{collection.title}</h4>
-            <button className="mt-auto py-2 px-4 bg-rose-200 text-rose-500 rounded text-sm font-medium hover:bg-rose-300 transition-colors">
-              View More
-            </button>
-          </div>
-        ))}
+                 <div key={collection.id} className="flex flex-col">
+                   <div className="relative aspect-square mb-3 bg-gray-100 rounded-md overflow-hidden">
+                     <Image
+                       src={collection.image || "/placeholder.svg"}
+                       alt={collection.title}
+                       fill
+                       className="object-cover"
+                     />
+                   </div>
+                   <div className="flex mb-1">
+                     {[...Array(5)].map((_, i) => (
+                       <span key={i} className="text-amber-400">
+                         ★
+                       </span>
+                     ))}
+                   </div>
+                   <div className="flex justify-between items-center mb-1">
+                     <h3 className="font-medium text-gray-900">${collection.price}</h3>
+                   </div>
+                   <h4 className="text-sm text-gray-900 mb-3">{collection.title}</h4>
+                   <button className="mt-auto py-2 px-4 border border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors">
+                     View More
+                   </button>
+                 </div>
+               ))}
       </div>
     </div>
   );

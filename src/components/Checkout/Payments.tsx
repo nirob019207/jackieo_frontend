@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { z } from 'zod';
+import flower from '@/assets/flower1.png';
+
 
 // Define the validation schema using Zod
 const billingSchema = z.object({
@@ -27,28 +29,28 @@ function Payments() {
       name: 'Double Dutch 50 Stems of Tulips',
       price: 120,
       quantity: 1,
-      image: 'https://images.unsplash.com/photo-1589123053646-4e8c4c8f7a0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      image: flower
     },
     {
       id: 2,
       name: 'Double Dutch 50 Stems of Tulips',
       price: 120,
       quantity: 1,
-      image: 'https://images.unsplash.com/photo-1589123053646-4e8c4c8f7a0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      image: flower
     },
     {
       id: 3,
       name: 'Double Dutch 50 Stems of Tulips',
       price: 120,
       quantity: 1,
-      image: 'https://images.unsplash.com/photo-1589123053646-4e8c4c8f7a0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      image: flower
     },
     {
       id: 4,
       name: 'Double Dutch 50 Stems of Tulips',
       price: 120,
       quantity: 1,
-      image: 'https://images.unsplash.com/photo-1589123053646-4e8c4c8f7a0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      image: flower
     }
   ]);
 
@@ -235,7 +237,7 @@ function Payments() {
           </div>
 
           {/* Billing Information Section */}
-          <div>
+          <div className='bg-white shadow-sm p-2'>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Billing Address</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

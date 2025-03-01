@@ -1,4 +1,7 @@
+// components/Explore.tsx
 import React from "react";
+import ProductCard from "./ProductCard";
+import { explore } from "@/constant/explore"; // Import the explore data
 
 import exploreImgOne from "@/assets/exploreImgOne.svg";
 import exploreImgTwo from "@/assets/exploreImgTwo.svg";

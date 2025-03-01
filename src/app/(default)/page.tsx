@@ -20,5 +20,5 @@ export default function page() {
       <CustomersReview />
       <Subscription />
     </div>
-  )
+  );
 }

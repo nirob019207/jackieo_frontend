@@ -8,7 +8,7 @@ export default function Subscription() {
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: `url(${subscriptionImg})`,
+                    backgroundImage: `url(${subscriptionImg.src})`,
                 }}
             ></div>
 

@@ -61,30 +61,30 @@ export default function OurFlowers() {
                             </li>
                         </ul>
 
-                        <button className="bg-rose-400 hover:bg-rose-500 text-white px-6 py-2 rounded transition duration-300">
+                        <button className="bg-primary hover:bg-rose-500 text-white px-6 py-2 rounded transition duration-300">
                             Shop Now
                         </button>
                     </div>
 
                     {/* Right Images */}
                     <div className="w-full md:w-1/2 relative">
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-4 relative">
                             <div className="col-span-2 md:col-span-1">
                                 <Image
                                     src={imgOne}
                                     alt="Florist arranging flowers"
                                     width={400}
                                     height={300}
-                                    className="rounded-lg object-cover h-full"
+                                    className="rounded-lg object-cover lg:w-[300px] lg:h-[350px]"
                                 />
                             </div>
-                            <div className="col-span-2 md:col-span-1 md:mt-12">
+                            <div className="col-span-2 md:col-span-1 md:mt-12 lg:absolute lg:left-[40%]">
                                 <Image
                                     src={imgTwo}
                                     alt="Wrapped flower bouquet"
                                     width={400}
                                     height={300}
-                                    className="rounded-lg object-cover h-full"
+                                    className="rounded-lg object-cover lg:w-[270px] lg:h-[350px]"
                                 />
                             </div>
                         </div>

@@ -87,7 +87,7 @@ export default function SesonalFlower() {
             </div>
             <div className={`${pathName === '/filterFlower' ? ' col-span-1 absolute right-0' : ''}`}>
               {
-                isActive ? <PriceFilter /> : <></>
+                isActive && pathName === '/filterFlower' ? <PriceFilter /> : <></>
               }
             </div>
           </div>

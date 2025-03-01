@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import galleryImgOne from "@/assets/galleryImgOne.svg";
 import galleryImgtwo from "@/assets/galleryImgTwo.svg";
 import galleryImgThree from "@/assets/galleryImgThree.svg";
@@ -18,66 +18,77 @@ export default function FlowerGallery() {
                 {/* Top row - 3 images */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     {/* First image with overlay */}
-                    <div className="relative overflow-hidden rounded-sm">
+                    <div className="relative group overflow-hidden rounded-sm">
                         <Image
                             src={galleryImgOne}
                             alt="Colorful flower arrangement on table"
                             width={400}
                             height={300}
-                            className="w-full h-[200px] md:h-[250px] object-cover"
+                            className="w-full h-[200px] md:h-[250px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                             <span className="text-white text-xl font-medium">Explore</span>
                         </div>
                     </div>
 
                     {/* Second image */}
-                    <div className="overflow-hidden rounded-sm">
+                    <div className="relative group overflow-hidden rounded-sm">
                         <Image
                             src={galleryImgtwo}
                             alt="Person holding pink rose bouquet"
                             width={400}
                             height={300}
-                            className="w-full h-[200px] md:h-[250px] object-cover"
+                            className="w-full h-[200px] md:h-[250px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                         />
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <span className="text-white text-xl font-medium">Explore</span>
+                        </div>
                     </div>
 
                     {/* Third image */}
-                    <div className="overflow-hidden rounded-sm">
+                    <div className="relative group overflow-hidden rounded-sm">
                         <Image
                             src={galleryImgThree}
                             alt="Vibrant coral and orange flower arrangement"
                             width={400}
                             height={300}
-                            className="w-full h-[200px] md:h-[250px] object-cover"
+                            className="w-full h-[200px] md:h-[250px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                         />
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <span className="text-white text-xl font-medium">Explore</span>
+                        </div>
                     </div>
                 </div>
 
                 {/* Bottom row - 2 images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-0 md:mt-0">
-                    <div className="overflow-hidden rounded-sm mx-auto md:mx-0 w-full max-w-md md:max-w-none">
+                    <div className="relative group overflow-hidden rounded-sm mx-auto md:mx-0 w-full max-w-md md:max-w-none">
                         <Image
                             src={galleryImgOne}
                             alt="Person holding pink rose bouquet"
                             width={400}
                             height={300}
-                            className="w-full h-[200px] md:h-[250px] object-cover"
+                            className="w-full h-[200px] md:h-[250px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                         />
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <span className="text-white text-xl font-medium">Explore</span>
+                        </div>
                     </div>
 
-                    <div className="overflow-hidden rounded-sm mx-auto md:mx-0 w-full max-w-md md:max-w-none">
+                    <div className="relative group overflow-hidden rounded-sm mx-auto md:mx-0 w-full max-w-md md:max-w-none">
                         <Image
                             src={galleryImgtwo}
                             alt="Purple and pink flower bouquet with ribbon"
                             width={400}
                             height={300}
-                            className="w-full h-[200px] md:h-[250px] object-cover"
+                            className="w-full h-[200px] md:h-[250px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                         />
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <span className="text-white text-xl font-medium">Explore</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
-

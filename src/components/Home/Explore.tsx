@@ -52,7 +52,7 @@ export default function Explore() {
             arranged.
           </p>
         </div>
-        <a href="#" className="text-sm text-rose-500 font-medium">
+        <a href="/sesonalFlower" className="text-sm text-rose-500 font-medium">
           See All
         </a>
       </div>
@@ -79,7 +79,7 @@ export default function Explore() {
               <h3 className="font-medium text-gray-900">${collection.price}</h3>
             </div>
             <h4 className="text-sm text-gray-900 mb-3">{collection.title}</h4>
-            <button className="mt-auto py-2 px-4 bg-rose-200 text-rose-500 rounded text-sm font-medium hover:bg-rose-300 transition-colors">
+            <button className="mt-auto py-2 px-4 border border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors">
               View More
             </button>
           </div>

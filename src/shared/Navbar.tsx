@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link href="/" className="text-gray-700 hover:text-rose-500">
             Home
           </Link>
-          <Link href="/sesonalFlower" className="text-gray-700 hover:text-rose-500">
+          <Link href="/seasonalFlower" className="text-gray-700 hover:text-rose-500">
             Flowers
           </Link>
           {/* <div className="relative group">

@@ -1,14 +1,14 @@
 import Image from "next/image"
-// import { ChevronLeft, ChevronRight } from "lucide-react"
+
 import imgOne from "@/assets/imgOne.svg";
 import imgTwo from "@/assets/imgTwo.svg";
 
 export default function OurFlowers() {
     return (
 
-        <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="container mx-auto px-4 py-8 md:py-20">
             {/* Why Our Flowers Stand Out Section */}
-            <div className="mt-16 md:mt-24 bg-white rounded-lg p-6 md:p-10">
+            <div className=" bg-white rounded-lg p-6 md:p-10">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     {/* Left Content */}
                     <div className="w-full md:w-1/2 space-y-6">

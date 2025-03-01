@@ -4,6 +4,7 @@ import exploreImgOne from "@/assets/exploreImgOne.svg";
 import exploreImgTwo from "@/assets/exploreImgTwo.svg";
 import exploreImgThree from "@/assets/exploreImgThree.svg";
 import exploreImgFour from "@/assets/exploreImgFour.svg";
+import Link from "next/link";
 
 export default function RelatedProducts() {
   const collections = [
@@ -62,9 +63,12 @@ export default function RelatedProducts() {
                      <h3 className="font-medium text-gray-900">${collection.price}</h3>
                    </div>
                    <h4 className="text-sm text-gray-900 mb-3">{collection.title}</h4>
-                   <button className="mt-auto py-2 px-4 border border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors">
-                     View More
-                   </button>
+                   <Link
+              href="/flowerDetails"
+              className="mt-auto py-2 px-4 border text-center border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors"
+            >
+              View More
+            </Link>
                  </div>
                ))}
       </div>

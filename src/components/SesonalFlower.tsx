@@ -145,9 +145,12 @@ export default function SesonalFlower() {
                                 <h3 className="font-medium text-gray-900">${collection.price}</h3>
                               </div>
                               <h4 className="text-sm text-gray-900 mb-3">{collection.title}</h4>
-                              <button className="mt-auto py-2 px-4 border border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors">
-                                View More
-                              </button>
+                              <Link
+              href="/flowerDetails"
+              className="mt-auto py-2 px-4 border text-center border-primary text-rose-500 hover:text-white rounded text-sm font-medium hover:bg-primary transition-colors"
+            >
+              View More
+            </Link>
                             </div>
                           ))}
                  </div>

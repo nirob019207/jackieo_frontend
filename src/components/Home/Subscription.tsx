@@ -4,12 +4,20 @@ import subscriptionImg from "@/assets/subscriptionImg.svg";
 export default function Subscription() {
     return (
         <div className="relative w-full overflow-hidden">
+            {/* Background Image */}
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url(${subscriptionImg})`,
+                }}
+            ></div>
+
             {/* Content container */}
-            <div className="relative py-12 sm:py-16 md:py-20 px-6 max-w-4xl mx-auto bg-no-repeat">
-                <div className="text-center" style={{
-                    backgroundImage: subscriptionImg
-                }}>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-2">Get The Latest Deals</h2>
+            <div className="relative py-12 sm:py-16 md:py-20 px-6 max-w-4xl mx-auto">
+                <div className="text-center">
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mb-2">
+                        Get The Latest Deals
+                    </h2>
                     <p className="text-gray-700 mb-6 max-w-xl mx-auto text-sm sm:text-base">
                         Sign up for our newsletter and get 10 Percent off your next order
                     </p>

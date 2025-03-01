@@ -62,22 +62,29 @@ export default function SesonalFlower() {
                 className="flex items-center gap-2 px-3 py-1 border rounded-md shadow-sm bg-secondary "
               >
                 <FilterIcon />
+                <FilterIcon />
                 Filter
               </button>
 
-              {/* Dropdown Menu */}
+             
               {isOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-secondary border rounded-md shadow-lg z-40">
+                <div className={`absolute right-0 mt-2 w-40 bg-secondary border rounded-md shadow-lg z-40 ${pathName === '/filterFlower' ? 'hidden' : ''}`}>
                   <ul className="py-2 text-sm text-gray-700">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                      Price: Low to High
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                      Price: High to Low
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                      Best Selling
-                    </li>
+                    <Link href="/filterFlower">
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        Price: Low to High
+                      </li>
+                    </Link>
+                    <Link href="/filterFlower">
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        Price: High to Low
+                      </li>
+                    </Link>
+                    <Link href="/filterFlower">
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        Best Selling
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               )}

@@ -1,10 +1,12 @@
-import SesonalFlower from '@/components/SesonalFlower'
+import FilterSidebar from '@/components/FilterSidebar'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-      <SesonalFlower />
+      <FilterSidebar/>
+
+
     </div>
   )
 }

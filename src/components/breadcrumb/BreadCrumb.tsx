@@ -45,7 +45,7 @@ export default function BreadCrumb() {
     <nav aria-label="Breadcrumb" className="py-4">
       <ol className="flex items-center space-x-2">
         <li>
-          <Link href="/" className="text-gray-700 hover:text-gray-900 text-sm font-medium">
+          <Link href="/" className="text-gray-700 text-xl hover:text-gray-900  font-medium">
             Home
           </Link>
         </li>
@@ -53,9 +53,9 @@ export default function BreadCrumb() {
           <li key={breadcrumb.url} className="flex items-center">
             <ChevronRight className="h-4 w-4 text-gray-500 mx-1" />
             {breadcrumb.isLast ? (
-              <span className="text-gray-500 text-sm font-medium">{breadcrumb.text}</span>
+              <span className="text-gray-500 text-xl font-medium">{breadcrumb.text}</span>
             ) : (
-              <Link href={breadcrumb.url} className="text-gray-700 hover:text-gray-900 text-sm font-medium">
+              <Link href={breadcrumb.url} className="text-gray-700 hover:text-gray-900 text-xl font-medium">
                 {breadcrumb.text}
               </Link>
             )}

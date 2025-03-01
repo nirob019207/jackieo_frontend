@@ -12,6 +12,36 @@ body {
   overflow-x: hidden;
 
 }
+.thumbs-swiper .swiper-slide {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 2px solid #f43f5e;
+}
+
+.main-swiper .swiper-button-next,
+.main-swiper .swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.main-swiper .swiper-button-next:after,
+.main-swiper .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .thumbs-swiper {
+    margin-top: 10px;
+  }
+}
 
 
 

@@ -7,6 +7,7 @@ import exploreImgTwo from "@/assets/exploreImgTwo.svg";
 import exploreImgThree from "@/assets/exploreImgThree.svg";
 import exploreImgFour from "@/assets/exploreImgFour.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Explore() {
   const collections = [
@@ -52,9 +53,9 @@ export default function Explore() {
             arranged.
           </p>
         </div>
-        <a href="#" className="text-sm text-rose-500 font-medium">
+        <Link href="/seasonalFlower" className="text-sm text-rose-500 font-medium">
           See All
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">

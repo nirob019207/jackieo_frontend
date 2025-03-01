@@ -1,4 +1,3 @@
-// data/products.ts
 import flower from '@/assets/flower1.png'
 export const explore = [
     {

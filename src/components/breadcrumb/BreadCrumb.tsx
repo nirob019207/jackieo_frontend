@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 
 export default function BreadCrumb() {
-  const params = useParams();
   const pathname = usePathname();
 
   // Convert URL path to breadcrumb items
@@ -50,7 +49,7 @@ export default function BreadCrumb() {
             Home
           </Link>
         </li>
-        {breadcrumbs.map((breadcrumb, index) => (
+        {breadcrumbs.map((breadcrumb ) => (
           <li key={breadcrumb.url} className="flex items-center">
             <ChevronRight className="h-4 w-4 text-gray-500 mx-1" />
             {breadcrumb.isLast ? (

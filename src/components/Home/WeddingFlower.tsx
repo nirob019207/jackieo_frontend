@@ -26,7 +26,7 @@ export default function WeddingFlower() {
                         Wedding Flowers
                     </h1>
                     <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-xl">
-                        From full-scale floral installations to intimate elopement flowers, we're stoked to flower for your special
+                        From full-scale floral installations to intimate elopement flowers, we&apos;re stoked to flower for your special
                         day!
                     </p>
                     <Link

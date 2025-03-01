@@ -1,14 +1,12 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
-import { ChevronDown, ShoppingCart } from "lucide-react"
+import {  ShoppingCart } from "lucide-react"
 import logo from "@/assets/logo.svg";
 import Image from "next/image";
 
 export default function Navbar() {
-  const [isOccasionsOpen, setIsOccasionsOpen] = useState(false)
-  const [isFlowersOpen, setIsFlowersOpen] = useState(false)
+
 
   return (
     <header className="border-b border-[#E8636F]">

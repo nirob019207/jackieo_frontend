@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useState } from 'react';
 import { z } from 'zod';
 
@@ -157,9 +158,11 @@ function Payments() {
                     <tr key={product.id} className="border-b border-gray-200">
                       <td className="py-4">
                         <div className="h-16 w-16 overflow-hidden rounded-md">
-                          <img 
+                          <Image
                             src={product.image} 
                             alt={product.name} 
+                            width={100}
+                            height={100}
                             className="h-full w-full object-cover"
                           />
                         </div>

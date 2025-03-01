@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Facebook, Mail, MapPin, Phone, Twitter } from "lucide-react"
@@ -8,6 +9,7 @@ import Image from "next/image";
 
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(false)
+  console.log(isMobile)
 
   useEffect(() => {
     const handleResize = () => {

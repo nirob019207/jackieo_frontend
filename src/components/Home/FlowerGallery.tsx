@@ -9,7 +9,7 @@ export default function FlowerGallery() {
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-serif font-medium text-gray-900 mb-4">Our Flower Gallery</h1>
                 <p className="max-w-2xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed">
-                    Explore our stunning collection of fresh and vibrant flowers, handpicked for every occasion. Let nature's
+                    Explore our stunning collection of fresh and vibrant flowers, handpicked for every occasion. Let nature&apos;s
                     beauty inspire your next floral arrangements.
                 </p>
             </div>

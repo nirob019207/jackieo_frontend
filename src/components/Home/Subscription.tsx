@@ -1,4 +1,3 @@
-import Image from "next/image"
 import subscriptionImg from "@/assets/subscriptionImg.svg";
 
 export default function Subscription() {

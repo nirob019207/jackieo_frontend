@@ -5,6 +5,7 @@ import type React from "react"
 import { useState } from "react"
 
 export default function PriceFilter() {
+
     const [priceRange, setPriceRange] = useState<number>(100)
     const [selectedPrice, setSelectedPrice] = useState<string>("Under $100")
     const [selectedOccasion, setSelectedOccasion] = useState<string>("Anniversary")

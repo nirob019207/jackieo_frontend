@@ -9,11 +9,12 @@ import { usePathname } from "next/navigation";
 import PriceFilter from "./PriceFilter";
 
 export default function SesonalFlower() {
+  const [isActive, setIsActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
 
   return (
-    <div className="container">
+    <div className="container mb-32">
       <div>
         <BreadCrumb />
 
@@ -22,7 +23,7 @@ export default function SesonalFlower() {
             <h1 className="text-[40px] font-bold ">Seasonal Flower</h1>
 
             {/* Filter Dropdown */}
-            <div className="relative">
+            <div className={`${pathName === '/filterFlower' ? "hidden" : "relative"}`}>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center gap-2 px-3 py-1 border rounded-md shadow-sm bg-secondary "
@@ -56,9 +57,24 @@ export default function SesonalFlower() {
             </div>
           </div>
 
+          {/* Filter Dropdown for filter page  */}
+
+          {
+            pathName === '/filterFlower' &&
+            <div className="flex justify-end my-4 lg:hidden">
+              <button
+                onClick={() => setIsActive(!isActive)}
+                className="flex items-center gap-2 px-3 py-1 border rounded-md shadow-sm bg-secondary "
+              >
+                <FilterIcon />
+              </button>
+            </div>
+          }
+
+
           {/* Dynamically render ProductCard using explore data */}
-          <div className={`${pathName === '/filterFlower' ? 'grid grid-cols-4' : ''}`}>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 ${pathName === '/filterFlower' ? 'lg:grid-cols-3 col-span-3' : 'col-span-4'}`}>
+          <div className={`${pathName === '/filterFlower' ? 'grid grid-cols-1 md:grid-cols-4 relative' : ''}`}>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 ${pathName === '/filterFlower' ? 'lg:grid-cols-3 col-span-1 md:col-span-3' : 'col-span-4'}`}>
               {explore.map((product, index) => (
                 <ProductCard
                   key={index}
@@ -69,8 +85,10 @@ export default function SesonalFlower() {
                 />
               ))}
             </div>
-            <div className={`${pathName === '/filterFlower' ? 'col-span-1' : ''}`}>
-              <PriceFilter />
+            <div className={`${pathName === '/filterFlower' ? ' col-span-1 absolute right-0' : ''}`}>
+              {
+                isActive ? <PriceFilter /> : <></>
+              }
             </div>
           </div>
         </div>

@@ -114,7 +114,11 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		}
-  	}
+  	},
+	  fontFamily: {
+		fontspring: "var(--font-fontspring-demo)",
+	
+	  },
   },
   plugins: [tailwindAnimate, tailwindAnimate],
 } satisfies Config;

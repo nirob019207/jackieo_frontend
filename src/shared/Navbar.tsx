@@ -3,28 +3,33 @@
 import { useState } from "react"
 import Link from "next/link"
 import { ChevronDown, ShoppingCart } from "lucide-react"
+import logo from "@/assets/logo.svg";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOccasionsOpen, setIsOccasionsOpen] = useState(false)
   const [isFlowersOpen, setIsFlowersOpen] = useState(false)
 
   return (
-    <header className="border-b border-pink-100">
+    <header className="border-b border-[#E8636F]">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center mr-2">
-            <div className="w-4 h-4 rounded-full border-2 border-white"></div>
+          <div className="flex items-center justify-center mr-2">
+            <Image src={logo} width={40} height={40} alt="Logo Ipsum" />
           </div>
           <span className="text-xl font-medium">Logo Ipsum</span>
         </div>
 
         {/* Navigation Links - Desktop */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#" className="text-gray-700 hover:text-rose-500">
-            Shop All
+          <Link href="/" className="text-gray-700 hover:text-rose-500">
+            Home
           </Link>
-          <div className="relative group">
+          <Link href="/sesonalFlower" className="text-gray-700 hover:text-rose-500">
+            Flowers
+          </Link>
+          {/* <div className="relative group">
             <button
               className="flex items-center text-gray-700 hover:text-rose-500"
               onClick={() => setIsOccasionsOpen(!isOccasionsOpen)}
@@ -63,19 +68,19 @@ export default function Navbar() {
                 Tulips
               </Link>
             </div>
-          </div>
-          <Link href="#" className="text-gray-700 hover:text-rose-500">
+          </div> */}
+          <Link href="/contact-us" className="text-gray-700 hover:text-rose-500">
             Contact Us
           </Link>
         </nav>
 
         {/* Right Side - Cart and Sign In */}
         <div className="flex items-center space-x-4">
-          <button className="text-gray-700 hover:text-rose-500">
+          <button className="text-gray-700 hover:text-textPrimary">
             <ShoppingCart className="h-6 w-6" />
             <span className="sr-only">Shopping Cart</span>
           </button>
-          <button className="bg-rose-500 text-white px-4 py-2 rounded hover:bg-rose-600 transition-colors">
+          <button className="bg-primary text-white px-4 py-2 rounded hover:bg-rose-600 transition-colors">
             Sign In
           </button>
         </div>

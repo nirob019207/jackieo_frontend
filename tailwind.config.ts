@@ -11,19 +11,22 @@ export default {
   ],
   theme: {
   	extend: {
-  		fontFamily: {
-  			sans: [
-  				'Montserrat',
-  				'sans-serif'
-  			],
-			  roboto: "var(--font-outfit)", // This applies the Roboto font
+		fontFamily: {
+			custom: ['MyCustomFont', 'sans-serif'], 
+		  },
+  		// fontFamily: {
+  		// 	sans: [
+  		// 		'Montserrat',
+  		// 		'sans-serif'
+  		// 	],
+		// 	  roboto: "var(--font-outfit)", // This applies the Roboto font
 			  
-  			inter: [
-  				'inter',
-  				'sans-serif',
-				 " Fallback"
-  			]
-  		},
+  		// 	inter: [
+  		// 		'inter',
+  		// 		'sans-serif',
+		// 		 " Fallback"
+  		// 	]
+  		// },
   		colors: {
   			primary: "#E8636F",
 			secondary:"#FFF2F0",

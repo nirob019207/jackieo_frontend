@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroImg from "@/assets/HeroImg.svg";
 import freeShipping from "@/assets/free-delivery.svg";
 import { useState } from "react";
@@ -32,28 +31,28 @@ export default function Hero() {
     ]
     return (
         <div className="relative mb-16">
-            <div className="bg-secondary px-5 py-8 md:pt-12 md:pb-28">
+            <div className="bg-secondary py-8 md:pt-12 md:pb-28">
                 {/* Hero Section */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12  container mx-auto">
+                <div className="flex flex-col md:flex-row items-center justify-between container mx-auto">
                     {/* Left Content */}
                     <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight">
-                            <span className="text-rose-400">Fresh</span> Blooms,
+                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-textPrimary">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#E8636F] via-[#F48B7F] to-[#F48B7F] leading-[150%]">Fresh</span> Blooms,
                             <br />
-                            Delivered to Your
+                            <span className="leading-[150%]">Delivered to Your</span>
                             <br />
-                            <span className="text-rose-400">Doorstep</span>
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#E8636F] via-[#F48B7F] to-[#F48B7F] leading-[150%]">Doorstep</span>
                         </h1>
-                        <p className="text-gray-700 max-w-md">
+                        <p className="text-textSecondary font-light leading-[160%]">
                             {heroSlider[activeIndex].text}
                         </p>
-                        <button className="bg-primary hover:bg-rose-500 text-white px-6 py-2 rounded transition duration-300">
+                        <button className="bg-primary text-white px-4 py-2 text-lg leading-[150%] font-medium hover:bg-rose-600 transition-colors">
                             Shop Now
                         </button>
                     </div>
 
                     {/* Right Image */}
-                    <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+                    <div className="w-full md:w-1/2 flex justify-center">
                         <Image
                             src={heroImg}
                             alt="Flower arrangement in basket"
@@ -65,98 +64,62 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            {/* Features Section */}
-            <div className="container">
-                <div className="lg:aboslute lg:-mt-10 bg-white rounded-lg p-4 shadow-xl">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {/* Feature 1 */}
-                        <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0">
-                                <div className="p-2 rounded-full">
-                                    <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-medium text-primary">Free Shipping</h3>
-                                <p className="text-sm text-gray-600">On all orders over 5</p>
-                            </div>
-                        </div>
-
-                        {/* Feature 2 */}
-                        <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0">
-                                <div className="p-2 rounded-full">
-                                    <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-medium text-primary">Fresh Flowers</h3>
-                                <p className="text-sm text-gray-600">We provide 100 fresh flowers</p>
-                            </div>
-                        </div>
-
-                        {/* Feature 3 */}
-                        <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0">
-                                <div className="p-2 rounded-full">
-                                    <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-medium text-primary">100 Positive Reviews</h3>
-                                <p className="text-sm text-gray-600">We have more than 9.8k happy customers</p>
-                            </div>
-                        </div>
-
-                        {/* Feature 4 */}
-                        <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0">
-                                <div className="p-2 rounded-full">
-                                    <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-medium text-primary">Occasions</h3>
-                                <p className="text-sm text-gray-600">Perfect for any occasions</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Pagination Dots */}
-            {/* <div className="flex justify-center items-center gap-4 mt-8">
-                <button className="text-gray-400 hover:text-rose-400">
-                    <ChevronLeft className="w-6 h-6" />
-                </button>
-                <div className="flex gap-2">
-                    <span className="w-2 h-2 rounded-full bg-rose-400"></span>
-                    <span className="w-2 h-2 rounded-full bg-[#D9D9D9]"></span>
-                    <span className="w-2 h-2 rounded-full bg-[#D9D9D9]"></span>
-                </div>
-                <button className="text-gray-400 hover:text-rose-400">
-                    <ChevronRight className="w-6 h-6" />
-                </button>
-            </div> */}
 
             {/* Pagination dots */}
-            <div className="flex justify-center items-center space-x-3 mt-24 absolute -bottom-14 md:-bottom-20 left-[35%] md:left-[40%] lg:left-[45%]">
-                <button className="text-gray-400 hover:text-rose-400">
-                    <ChevronLeft className="w-6 h-6" />
-                </button>
+            <div className="flex justify-center items-center space-x-2 absolute bottom-[43%] md:bottom-[36%] lg:bottom-[26%] xl:bottom-[18%] left-[45%] md:left-[50%]">
                 {heroSlider.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setActiveIndex(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-primary" : "bg-[#D9D9D9] hover:bg-pink-300"
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-primary" : "bg-[#D9D9D9] hover:bg-pink-300"
                             }`}
                         aria-label={`Go to testimonial ${index + 1}`}
                         aria-current={index === activeIndex ? "true" : "false"}
                     />
                 ))}
-                <button className="text-gray-400 hover:text-rose-400">
-                    <ChevronRight className="w-6 h-6" />
-                </button>
+            </div>
+
+            {/* Features Section */}
+            <div className="container">
+                <div className="md:absolute top-[85%] container">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start gap-4 bg-white shadow-xl p-6">
+                        {/* Feature 1 */}
+                        <div className="flex items-center gap-3">
+                            <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
+                            <div className="">
+                                <h3 className="font-medium text-primary text-lg xl:text-xl leading-[160%]">Free Shipping</h3>
+                                <p className="text-textSecondary font-light leading-[160%]">On all orders over 5</p>
+                            </div>
+                        </div>
+
+                        {/* Feature 2 */}
+                        <div className="flex items-center gap-3">
+                            <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
+                            <div>
+                                <h3 className="font-medium text-primary text-lg xl:text-xl leading-[160%]">Fresh Flowers</h3>
+                                <p className="text-textSecondary font-light leading-[160%]">We provide 100 fresh flowers</p>
+                            </div>
+                        </div>
+
+                        {/* Feature 3 */}
+                        <div className="flex items-center gap-3">
+                            <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
+                            <div>
+                                <h3 className="font-medium text-primary text-lg xl:text-xl leading-[160%]">100 Positive Reviews</h3>
+                                <p className="text-textSecondary font-light leading-[160%]">We have more than 9.8k happy customers</p>
+                            </div>
+                        </div>
+
+                        {/* Feature 4 */}
+                        <div className="flex items-center gap-3">
+                            <Image src={freeShipping} width={100} height={100} alt="Free Shipping" className="w-16 h-16" />
+                            <div>
+                                <h3 className="font-medium text-primary text-lg xl:text-xl leading-[160%]">Occasions</h3>
+                                <p className="text-textSecondary font-light leading-[160%]">Perfect for any occasions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -7,13 +7,33 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
+/* @font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/Fontspringbolditalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+} */
+
+/* @font-face {
   font-family: 'FONTSPRING DEMO';
   src: url('./Demo_Fonts/Fontspring-DEMO-quincycf-light.otf') format('otf'),
     url('./Demo_Fonts/Fontspring-DEMO-quincycf-medium.otf') format('otf');
   font-weight: normal;
   font-style: normal;
+} */
+
+.font-fontspring {
+  font-family: var(--font-font-spring-next);
 }
+
+body {
+  font-family: var(--font-font-spring-next);
+}
+
+.root {
+  --font-fontspring-demo: 'FONTSPRING DEMO', serif;
+}
+
 .thumbs-swiper .swiper-slide {
   opacity: 0.6;
   transition: opacity 0.3s;
@@ -43,18 +63,6 @@ html {
   .thumbs-swiper {
     margin-top: 10px;
   }
-}
-
-.font-fontspring {
-  font-family: var(--font-font-spring-next);
-}
-
-body {
-  font-family: var(--font-font-spring-next);
-}
-
-.root {
-  --font-fontspring-demo: 'FONTSPRING DEMO', serif;
 }
 
 @layer base {
